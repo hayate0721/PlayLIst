@@ -4,6 +4,7 @@ import java.util.LinkedList;
 public class Main {
 
     public static void main(String[] args) {
+
         ArrayList<Album> albums = new ArrayList<>();
 
         Album album = new Album("Stormbringer", "Deep Purple");
@@ -35,8 +36,15 @@ public class Main {
         albums.get(0).addToPlayList("Holy man", playList);
         albums.get(0).addToPlayList("Speed king", playList);  // Does not exist
         albums.get(0).addToPlayList(9, playList);
+        albums.get(1).addToPlayList(8, playList);
         albums.get(1).addToPlayList(3, playList);
         albums.get(1).addToPlayList(2, playList);
         albums.get(1).addToPlayList(24, playList);  // There is no track 24
+
+        /** Estimated Output
+         * The song Speed king is not in this album
+         * This album does not have a track 24
+         */
+
     }
 }
